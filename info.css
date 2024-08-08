@@ -170,3 +170,7 @@ h2 {
 .back-button:hover {
     background-color: #45a049; /* Cor de fundo ao passar o mouse */
 }
+
+h1{
+    text-align: center;
+}
