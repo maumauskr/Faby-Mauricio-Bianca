@@ -1,0 +1,164 @@
+/* Estilo principal para o layout */
+.template {
+    position: relative; /* Posição relativa para permitir posicionamento absoluto dos filhos */
+    background-color: transparent; /* Fundo transparente */
+    display: grid; /* Usar CSS Grid para o layout */
+    grid-template-areas: 
+    'header header header'
+    'main main main'
+    'footer footer footer'; /* Definir áreas do grid */
+    grid-template-columns: 10% auto 10%; /* Definir larguras das colunas */
+    overflow-x: hidden; /* Ocultar overflow horizontal */
+}
+
+/* Posicionamento do logo */
+.logo {
+    position: absolute; /* Posicionamento absoluto */
+    top: -45px; /* Mover o logo para cima */
+    left: 41.5%; /* Centralizar o logo horizontalmente */
+}
+
+/* Estilo comum para header, main e footer */
+.header, .main, .footer {
+    background-color: rgb(219, 212, 203); /* Cor de fundo */
+    border: 1px solid white; /* Borda branca */
+    padding: 20px; /* Padding */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    margin-top: 20px; /* Margem no topo */
+    text-align: center; /* Centralizar texto */
+    top: 80%; /* Posição a partir do topo */
+    position: relative; /* Posicionamento relativo */
+    left: 35%; /* Posição a partir da esquerda */
+}
+
+/* Estilo da lista não ordenada na navbar */
+.navbar nav ul {
+    list-style: none; /* Remover estilo padrão da lista */
+    padding: 0; /* Remover padding */
+    margin: 0; /* Remover margem */
+    display: flex; /* Usar flexbox para alinhamento */
+    justify-content: center; /* Centralizar itens */
+}
+
+/* Estilo dos itens da lista na navbar */
+.navbar nav ul li {
+    margin: 0 15px; /* Margem entre os itens */
+}
+
+/* Estilo dos links na navbar */
+.navbar nav ul li a {
+    color: rgb(7, 57, 16); /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    font-family: Arial, sans-serif; /* Família da fonte */
+    font-size: 1.2em; /* Tamanho da fonte */
+}
+
+/* Efeito de hover nos links da navbar */
+.navbar nav ul li a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo do cabeçalho */
+.header {
+    position: relative; /* Posicionamento relativo */
+    grid-area: header; /* Área do grid atribuída */
+    height: 20vh; /* Altura do cabeçalho */
+}
+
+/* Estilo da imagem no cabeçalho */
+.header img {
+    height: auto; /* Manter proporção da altura */
+    max-height: 300px; /* Altura máxima */
+    width: auto; /* Manter proporção da largura */
+    max-width: 300px; /* Largura máxima */
+}
+
+/* Área do grid para a navbar */
+.nav {
+    grid-area: nav; /* Área do grid atribuída */
+}
+
+/* Estilo do conteúdo principal */
+.main {
+    position: relative; /* Posicionamento relativo */
+    grid-area: main; /* Área do grid atribuída */
+    color: rgb(7, 57, 16); /* Cor do texto */
+    text-align: left; /* Alinhar texto à esquerda */
+    font-family: monospace; /* Família da fonte */
+    align-items: center; /* Alinhamento central */
+    font-size: 2em; /* Tamanho da fonte */
+    width: 98%; /* Largura da área principal */
+    height: 175vh; /* Altura da área principal */
+}
+
+/* Estilo do rodapé */
+.footer {
+    position: relative; /* Posicionamento relativo */
+    grid-area: footer; /* Área do grid atribuída */
+    height: 4.9vh; /* Altura do rodapé */
+    color: rgb(7, 57, 16); /* Cor do texto */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Estilo dos parágrafos */
+p {
+    margin: 0; /* Remover margem */
+    color: rgb(7, 57, 16); /* Cor do texto */
+}
+
+/* Estilo dos cabeçalhos h1 */
+h1 {
+    color: rgb(7, 57, 16); /* Cor do texto */
+    font-family: monospace; /* Família da fonte */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Estilo dos links personalizados */
+.styled-link {
+    color: rgb(7, 57, 16); /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    font-weight: bold; /* Negrito */
+    border-bottom: 2px solid rgb(7, 57, 16); /* Borda inferior */
+    padding-bottom: 2px; /* Padding inferior */
+    transition: color 0.3s, border-color 0.3s; /* Transição para cor e borda */
+}
+
+/* Efeito de hover nos links personalizados */
+.styled-link:hover {
+    color: rgb(42, 82, 31); /* Cor ao passar o mouse */
+    border-color: rgb(42, 82, 31); /* Cor da borda ao passar o mouse */
+}
+
+/* Estilo de centralização */
+.centralizado {
+    text-align: center; /* Centralizar texto */
+    margin: 1px auto; /* Margem automática e 1px */
+}
+/* Estilização do botão voltar */
+.back-button {
+    display: inline-block; /* Bloco inline para espaçamento e alinhamento adequados */
+    padding: 10px 20px; /* Padding interno do botão */
+    margin: 20px 0; /* Margem no topo e na parte inferior */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
+    color: #fff; /* Cor do texto */
+    background-color: #636363; /* Cor de fundo */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Alinhar texto ao centro */
+    text-decoration: none; /* Remover sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    position: absolute; /* Posição absoluta */
+    top: 95%; /* Posição a partir do topo */
+    right: 20px; /* Posição a partir da direita */
+}
+
+/* Efeito hover no botão voltar */
+.back-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
